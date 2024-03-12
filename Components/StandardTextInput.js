@@ -26,6 +26,10 @@ const styles = StyleSheet.create({
    color: "#FFFFFF",
    fontWeight:700,
    fontSize:15,
+   backgroundColor:"white",
+   width:60,
+   borderWidth:1,
+   borderColor:"#EFEFEF"
   },
 });
 
