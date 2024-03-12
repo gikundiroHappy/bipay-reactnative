@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, } from "react-native";
 import { TextInput } from "react-native-paper";
 
-const StandardTextInput = ({ label,value, onChangeText,icon,secureTextEntry,error,keyboardType,onPress}) => {
+const StandardTextInput = ({ label,value, onChangeText,icon,secureTextEntry,error,keyboardType,onPress,}) => {
   return (
     <View>
     <TextInput 
@@ -15,21 +15,22 @@ const StandardTextInput = ({ label,value, onChangeText,icon,secureTextEntry,erro
     style={styles.textInput} 
     underlineColor='white' 
     textColor='black'
-    theme={{colors:{primary:"#E0BF36"}}}
-    right={<TextInput.Icon size={19} icon={icon} color="#E0BF36" onPress={onPress}></TextInput.Icon>}
+    theme={{colors:{primary:"#CECFD7"}}}
+    right={<TextInput.Icon size={19} icon={icon} color="#CECFD7" onPress={onPress}></TextInput.Icon>}
     />
     </View>
   );
 };
 const styles = StyleSheet.create({
   textInput: { 
-   color: "#FFFFFF",
-   fontWeight:700,
+   height: 50,
+   fontWeight:500,
    fontSize:15,
-   backgroundColor:"white",
-   width:60,
+   borderRadius:5,
    borderWidth:1,
-   borderColor:"#EFEFEF"
+   borderColor:"#CECFD7",
+   backgroundColor:"white",
+   marginTop:10,
   },
 });
 
