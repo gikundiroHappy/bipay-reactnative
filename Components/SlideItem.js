@@ -1,8 +1,10 @@
+
 import { View, Text,Dimensions,Image } from 'react-native'
 import React from 'react'
 
 const height = Dimensions.get('screen').height;
 const width = Dimensions.get('screen').width;
+
 
 const SlideItem = ({item}) => {
   return (

@@ -8,7 +8,9 @@ import Pagination3 from './Screens/Pagination3';
 import Landing from './Screens/Landing';
 import Register from './Screens/Register';
 import Slider from './Components/Slider'
-import Payment from './Screens/Payment'
+import Payment from './Screens/Payment';
+import SendMoney from './Screens/SendMoney';
+import Received from './Screens/Received';
 
 
 export default function App() {
@@ -20,10 +22,15 @@ export default function App() {
       {/* <Pagination2/> */}
       {/* <Pagination3/> */}
       {/* <Landing/> */}
+      {/* <Payment/> */}
+      {/* <SendMoney/> */}
+      <Received/>
       {/* <Register/> */}
       {/* <Slider/> */}
+
       {/* <Payment/> */}
       <StatusBar style="auto" />
+
     </View>
   );
 }
