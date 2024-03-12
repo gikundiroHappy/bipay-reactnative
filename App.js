@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import StandardTextInput from './Components/StandardTextInput';
+import Verification from './Screens/Verification';
 import Pagination1 from './Screens/Pagination1';
 import Pagination2 from './Screens/Pagination2';
 import Pagination3 from './Screens/Pagination3';
@@ -12,6 +13,8 @@ import Slider from './Components/Slider'
 export default function App() {
   return (
     <View style={styles.container}>
+      <Verification/>
+      <StatusBar style="auto" />
       {/* <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" /> */}
       {/* <Pagination1/> */}
