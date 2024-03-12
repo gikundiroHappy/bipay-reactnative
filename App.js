@@ -8,6 +8,8 @@ import Landing from './Screens/Landing';
 import Register from './Screens/Register';
 import Slider from './Components/Slider'
 import Payment from './Screens/Payment';
+import SendMoney from './Screens/SendMoney';
+import Received from './Screens/Received';
 
 export default function App() {
   return (
@@ -18,7 +20,9 @@ export default function App() {
       {/* <Pagination2/> */}
       {/* <Pagination3/> */}
       {/* <Landing/> */}
-      <Payment/>
+      {/* <Payment/> */}
+      {/* <SendMoney/> */}
+      <Received/>
       {/* <Register/> */}
       {/* <Slider/> */}
     </View>
