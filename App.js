@@ -7,7 +7,7 @@ import Pagination3 from './Screens/Pagination3';
 import Landing from './Screens/Landing';
 import Register from './Screens/Register';
 import Slider from './Components/Slider'
-
+import Payment from './Screens/Payment';
 
 export default function App() {
   return (
@@ -18,8 +18,9 @@ export default function App() {
       {/* <Pagination2/> */}
       {/* <Pagination3/> */}
       {/* <Landing/> */}
+      <Payment/>
       {/* <Register/> */}
-      <Slider/>
+      {/* <Slider/> */}
     </View>
   );
 }
