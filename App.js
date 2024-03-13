@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import StandardTextInput from './Components/StandardTextInput';
+
 import Login from './Screens/Login';
 import Pagination1 from './Screens/Pagination1';
 import Pagination2 from './Screens/Pagination2';
@@ -12,11 +13,14 @@ import Payment from './Screens/Payment';
 import SendMoney from './Screens/SendMoney';
 import Received from './Screens/Received';
 
+import Deal from './Screens/deals';
+
 
 export default function App() {
 
   return (
     <View style={styles.container}>
+
       <Login/>
       {/* <Pagination1/> */}
       {/* <Pagination2/> */}
@@ -29,6 +33,8 @@ export default function App() {
       {/* <Slider/> */}
 
       {/* <Payment/> */}
+     <Deal/>
+      {/* <Text>Open up App.js to start working on your app!</Text> */}
       <StatusBar style="auto" />
 
     </View>
@@ -37,7 +43,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
+
+   
+
+    flex: 1,
     // backgroundColor: '#fff',
     // alignItems: 'center',
     // justifyContent: 'center',
