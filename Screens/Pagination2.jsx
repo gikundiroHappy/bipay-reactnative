@@ -1,5 +1,7 @@
 import { View, Text, Image, Dimensions } from 'react-native'
 import React from 'react'
+import SlideItem from '../Components/SlideItem'
+
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
@@ -9,7 +11,7 @@ const width = Dimensions.get('window').width
     <View style={{backgroundColor:"#2D2E9B", height:height, width:width, alignItems:"center", padding:20, gap:70 }}>
         <View style={{flexDirection:"row", gap:245, marginTop:20}}>
             <Image source={require('../assets/LOGO.jpg')} style={{height:40, width:95}}/>
-            <Text style={{color:"white", fontWeight:450, }}>SKIP</Text>
+            <Text style={{color:"white", fontWeight:400, }}>SKIP</Text>
         </View>
         <Image source={require('../assets/img2.png')} style={{height:240, width:240}}/>
     

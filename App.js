@@ -11,22 +11,24 @@ import Slider from './Components/Slider'
 import Payment from './Screens/Payment';
 import SendMoney from './Screens/SendMoney';
 import Received from './Screens/Received';
+import SlideItem from './Components/SlideItem';
 
 
 export default function App() {
 
   return (
     <View style={styles.container}>
-      <Login/>
+      {/* <Login/> */}
       {/* <Pagination1/> */}
       {/* <Pagination2/> */}
       {/* <Pagination3/> */}
       {/* <Landing/> */}
       {/* <Payment/> */}
       {/* <SendMoney/> */}
-      <Received/>
+      {/* <Received/> */}
       {/* <Register/> */}
       {/* <Slider/> */}
+      <SlideItem/>
 
       {/* <Payment/> */}
       <StatusBar style="auto" />
