@@ -12,6 +12,7 @@ import Slider from './Components/Slider'
 import Payment from './Screens/Payment';
 import SendMoney from './Screens/SendMoney';
 import Received from './Screens/Received';
+import History from './Screens/History';
 
 import Deal from './Screens/deals';
 
@@ -21,20 +22,28 @@ export default function App() {
   return (
     <View style={styles.container}>
 
+      {/* <Login/> */}
+
+
       <Login/>
+
       {/* <Pagination1/> */}
       {/* <Pagination2/> */}
       {/* <Pagination3/> */}
       {/* <Landing/> */}
       {/* <Payment/> */}
       {/* <SendMoney/> */}
-      <Received/>
+      {/* <Received/> */}
       {/* <Register/> */}
       {/* <Slider/> */}
+
+<History/>
+
 
       {/* <Payment/> */}
      <Deal/>
       {/* <Text>Open up App.js to start working on your app!</Text> */}
+
       <StatusBar style="auto" />
 
     </View>

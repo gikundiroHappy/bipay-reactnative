@@ -53,7 +53,7 @@ console.log("logged in")
       <StatusBar style="auto"/>
       <View style={{backgroundColor:"#4647AF",height:200,}}>
       </View>
-      <View style={{position:"absolute",display:"flex",top:100,right:0,left:0,display:"flex",flexDirection:"row",justifyContent:"center"}}>
+      <View style={{position:"absolute",display:"flex",top:70,right:0,left:0,display:"flex",flexDirection:"row",justifyContent:"center"}}>
       <View style={{backgroundColor:"#FFFFFF",borderRadius:10,width:350,padding:30}}>
         <Text style={{fontWeight:"bold",textAlign:"center",fontSize:20,color:"#3F3F3F",padding:15}}>Login</Text>
         <View style={{display:"flex",flexDirection:"row",justifyContent:"center",}}>

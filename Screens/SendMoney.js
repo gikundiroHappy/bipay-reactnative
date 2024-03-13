@@ -83,7 +83,6 @@ function SendMoney() {
       },
       container: {
         backgroundColor: '#3C3CA7',
-        width:400,
         height:100,
         flexDirection:'row',
         paddingHorizontal:40,
@@ -96,7 +95,6 @@ function SendMoney() {
       container2:{
        
         backgroundColor: '#E1EBEE',
-        width:400,
         height:690,
         paddingHorizontal:40,
         gap:20,
@@ -128,7 +126,7 @@ function SendMoney() {
         flexDirection:'row',
         gap:30,
         shadowOffset: {
-              width: 20,
+              width: 10,
               height: 10,
         },
         shadowOpacity: 0.25,
