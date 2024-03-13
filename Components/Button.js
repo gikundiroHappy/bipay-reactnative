@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
     borderRadius:5
   },
   btnText:{
-    fontWeight:600
+    fontWeight:"bold"
   }
 });
 

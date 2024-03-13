@@ -18,7 +18,7 @@ export default function HistoryData({icon,title,date,amount,color}) {
 
         <View>
             <Text style={{fontWeight:"bold",fontSize:16,color:"#686A6C"}}>{title}</Text>
-            <Text style={{fontWeight:600,fontSize:14,color:"#CECFD9",padding:5}}>{date}</Text>
+            <Text style={{fontWeight:'bold',fontSize:14,color:"#CECFD9",padding:5}}>{date}</Text>
         </View>
        </View>
 
