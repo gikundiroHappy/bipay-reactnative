@@ -76,11 +76,11 @@ const styles = StyleSheet.create({
   maincontainer: {
     flex: 1,
     flexDirection:'column',
+    width:"100%",
 
   },
   container: {
     backgroundColor: '#3C3CA7',
-    width:400,
     height:100,
     flexDirection:'row',
     paddingHorizontal:40,
@@ -92,7 +92,6 @@ const styles = StyleSheet.create({
   container2:{
    
     backgroundColor: '#E1EBEE',
-    width:400,
     height:650,
     paddingHorizontal:40,
     gap:20,
@@ -134,7 +133,7 @@ const styles = StyleSheet.create({
  
     gap:10,
     shadowOffset: {
-          width: 20,
+          width: 10,
           height: 10,
     },
     shadowOpacity: 0.25,
@@ -153,7 +152,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     gap:10,
     shadowOffset: {
-          width: 20,
+          width: 10,
           height: 10,
     },
     shadowOpacity: 0.25,
