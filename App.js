@@ -24,7 +24,7 @@ export default function App() {
       {/* <Landing/> */}
       {/* <Payment/> */}
       {/* <SendMoney/> */}
-      <Received/>
+      {/* <Received/> */}
       {/* <Register/> */}
       {/* <Slider/> */}
 
