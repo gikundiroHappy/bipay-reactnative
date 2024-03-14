@@ -100,6 +100,9 @@ const styles = StyleSheet.create({
     width:400,
     height:85,
 
+    width:400,
+    height:85,
+
     flexDirection:'row',
     paddingHorizontal:40,
     gap:20,
@@ -108,7 +111,6 @@ const styles = StyleSheet.create({
     
   },
   container2:{
-   
     backgroundColor: '#E1EBEE',
 
     width:400,
