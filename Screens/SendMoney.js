@@ -9,7 +9,7 @@ function SendMoney() {
   return (
     <View style={styles.maincontainer}>
     <View style={styles.container}>
-    <FontAwesomeIcon icon={faChevronLeft} style={styles.icon} size={20} />
+    <FontAwesomeIcon icon={faChevronLeft} style={styles.icon} size={10} />
      <Text style={styles.maintext}>Send Money</Text>
     </View>
     <View style={styles.container2}>
@@ -17,22 +17,22 @@ function SendMoney() {
     <Image source={require('../assets/phone.png')} style={styles.logo} />
     <View style={styles.textbalance}> 
  
- <Text style={{fontWeight:'bold',fontSize:15,top:25}}>Transfer to bipay</Text>
+ <Text style={{fontWeight:'bold',fontSize:15,top:22}}>Transfer to bipay</Text>
     </View>
  
-    <FontAwesomeIcon icon={faChevronRight} style={{color:'#B8B8B8', left:70,top:30 }} size={13} />
+    <FontAwesomeIcon icon={faChevronRight} style={{color:'#B8B8B8', left:70,top:28 }} size={13} />
     </View>
     <View style={styles.card}>
     <Image source={require('../assets/house.png')} style={styles.logo} />
     <View style={styles.textbalance}> 
  
- <Text style={{fontWeight:'bold',fontSize:15,top:25}}>Transfer to bank</Text>
+ <Text style={{fontWeight:'bold',fontSize:15,top:22}}>Transfer to bank</Text>
     </View>
  
-    <FontAwesomeIcon icon={faChevronRight} style={{color:'#B8B8B8', left:70,top:30 }} size={13} />
+    <FontAwesomeIcon icon={faChevronRight} style={{color:'#B8B8B8', left:70,top:28 }} size={13} />
     </View>
     <View>
-      <Text style={{fontSize:20, fontWeight:'bold', top:45}}>Transaction History</Text>
+      <Text style={{fontSize:20, fontWeight:'bold', top:70}}>Transaction History</Text>
     </View>
     <View >
     <View style={{flexDirection:'row', top:60, gap:20}}>
@@ -90,6 +90,7 @@ function SendMoney() {
         gap:20,
         justifyContent:'left',
         alignItems:'center',
+     
        
         
       },
@@ -104,24 +105,26 @@ function SendMoney() {
       
       },
       logo:{
-        width:30,
-        height:30,
-        top:20,
+        width:40,
+        height:40,
+        top:12,
         left:10,
       },
       icon:{
         color:'white',
+        top:6,
       },
       maintext:{
         color:'white',
-        fontSize:22,
-        fontWeight:'bold'
+        fontSize:17,
+        fontWeight:'bold',
+        top:6,
     
       },
       card:{
         backgroundColor:'white',
         width:320,
-        height:80,
+        height:70,
         borderRadius:10,
         top:40,
         shadowColor: '#000',

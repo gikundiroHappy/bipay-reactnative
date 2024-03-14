@@ -46,7 +46,7 @@ console.log("logged in")
   }
 
   return (
-    <KeyboardAvoidingView enabled  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+    // <KeyboardAvoidingView enabled >
     
       <ScrollView>
       <View style={styles.container}>
@@ -90,7 +90,7 @@ console.log("logged in")
       </View>
       </ScrollView>
     
-    </KeyboardAvoidingView>
+    // </KeyboardAvoidingView>
   );
 }
 

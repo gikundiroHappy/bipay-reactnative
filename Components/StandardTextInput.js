@@ -24,7 +24,6 @@ const StandardTextInput = ({ label,value, onChangeText,icon,secureTextEntry,erro
 const styles = StyleSheet.create({
   textInput: { 
    height: 50,
-   fontWeight:500,
    fontSize:15,
    borderRadius:5,
    borderWidth:1,

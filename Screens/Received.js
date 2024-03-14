@@ -2,24 +2,45 @@ import React from 'react';
 import { StyleSheet, Text, View,Image } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import Button from '../Components/Button';
 
 function Received() {
   return (
     <View style={styles.maincontainer}>
-      <View style={styles.container}>
-        <FontAwesomeIcon icon={faChevronLeft} style={styles.icon} size={20} />
-        <Text style={styles.maintext}>Receive Money</Text>
-      </View>
-      <View style={styles.backgroundContainer}>
-        <View style={styles.contentContainer}>
-        <Image source={require('../assets/qr.png')} style={styles.imagee} />
+  <View style={styles.maincontainer}>
+  <View style={styles.container}>
+    <FontAwesomeIcon icon={faChevronLeft} style={styles.icon} size={20} />
+    <Text style={styles.maintext}>Receive Money</Text>
+  </View>
+  <View style={styles.backgroundContainer}>
+    <View style={styles.contentContainer}>
+      <Image source={require('../assets/qr.png')} style={styles.imagee} />
+      <View style={styles.textContainer}>
+        <Text style={{fontWeight:'bold'}}>083-987-3888</Text>
+        <Text style={[styles.regularText, { textAlign: 'center' , color:'gray', top:25 ,}]}>Set the amount and send to your friend to receive money</Text>
+        <View style={{top:55}}> 
+        <Button title="Set Amount"
+            backgroundColor="#3C3CA7"
+            color="#ffffff"
+            borderColor="#3C3CA7"
+            borderWidth={2} />
         </View>
+       
       </View>
     </View>
+  </View>
+</View>
+</View>
+
   );
 }
 
 const styles = StyleSheet.create({
+  textContainer: {
+    alignItems: 'center',
+    marginTop: 70, 
+    paddingHorizontal:40,
+  },
   maincontainer: {
     flex: 1,
     flexDirection: 'column',
@@ -54,8 +75,8 @@ alignSelf:'center',
   },
   contentContainer: {
     backgroundColor: 'white',
-    height: 300,
-    width: '80%',
+    height: 390,
+    width: '75%',
     top:50,
     borderRadius: 10,
     shadowColor: '#000',
