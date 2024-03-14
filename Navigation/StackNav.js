@@ -18,6 +18,7 @@ export default function StackNavigation() {
         <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
         <Stack.Screen name='history' component={BottomNav} options={{ headerShown: false }} />
         <Stack.Screen name='deal' component={BottomNav} options={{ headerShown: false }} />
+        <Stack.Screen name='scan' component={BottomNav} options={{ headerShown: false }} />
 
       </Stack.Navigator>
     </NavigationContainer>
