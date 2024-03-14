@@ -114,7 +114,7 @@ export default function Login() {
       </View>
       </ScrollView>
     
-    </KeyboardAvoidingView>
+     </KeyboardAvoidingView>
   );
 }
 
