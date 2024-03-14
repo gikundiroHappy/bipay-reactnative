@@ -14,26 +14,27 @@ import SendMoney from './Screens/SendMoney';
 import Received from './Screens/Received';
 
 import Deal from './Screens/deals';
+import Profile from './Screens/profile';
 
 
 export default function App() {
 
   return (
     <View style={styles.container}>
-
-      <Login/>
+<Profile/>
+      {/* <Login/> */}
       {/* <Pagination1/> */}
       {/* <Pagination2/> */}
       {/* <Pagination3/> */}
       {/* <Landing/> */}
       {/* <Payment/> */}
       {/* <SendMoney/> */}
-      <Received/>
+      {/* <Received/> */}
       {/* <Register/> */}
       {/* <Slider/> */}
 
       {/* <Payment/> */}
-     <Deal/>
+     {/* <Deal/> */}
       {/* <Text>Open up App.js to start working on your app!</Text> */}
       <StatusBar style="auto" />
 

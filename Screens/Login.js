@@ -90,7 +90,7 @@ console.log("logged in")
       </View>
       </ScrollView>
     
-    </KeyboardAvoidingView>
+     </KeyboardAvoidingView>
   );
 }
 
