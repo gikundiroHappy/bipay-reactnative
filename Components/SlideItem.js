@@ -1,28 +1,56 @@
+import { View, Text, Dimensions, Image } from "react-native";
+import React, { useRef } from "react";
+import Swiper from "react-native-swiper";
+import Pagination2 from "../Screens/Pagination2";
+import Pagination3 from "../Screens/Pagination3";
+import Pagination1 from "../Screens/Pagination1";
+import { slides } from "../data/slides";
+import Carousel, { Pagination } from "react-native-snap-carousel";
 
-import { View, Text,Dimensions,Image } from 'react-native'
-import React from 'react'
+const height = Dimensions.get("screen").height;
+const width = Dimensions.get("screen").width;
 
-const height = Dimensions.get('screen').height;
-const width = Dimensions.get('screen').width;
+const SlideItem = ({ item }) => {
+  const carouselRef = useRef(null);
+  const data = [
+    { id: 1, component: <Pagination1 /> },
+    { id: 2, component: <Pagination2 /> },
+    { id: 3, component: <Pagination3 /> },
+  ];
 
-
-const SlideItem = ({item}) => {
+  const handleIndexChanged = (index) => {
+    console.log("Current slide index:", index);
+    // You can perform any additional actions based on the index here
+  };
   return (
-    <View>
-      <View style={{backgroundColor:"#3F40AA", height:height, width:width, justifyContent:"space-around", alignItems:"center", padding:20}}>
-        <View style={{flexDirection:"row", gap:245, marginBottom:70}}>
-            <Image source={item.img} resizeMode="contain" style={{height:40, width:95}}/>
-            <Text style={{color:"white", fontWeight:450, }}>SKIP</Text>
-        </View>
-    <View style={{backgroundColor:"#2D2E9B", height:240, width:240, borderRadius:"100%", alignItems:"center", justifyContent:"center" }}>
-        <Image source={require('../assets/mag.png')} style={{height:170, width:215, borderRadius:22}}/>
-    </View>
-    <View style={{alignItems:"center", justifyContent:"center", gap:30}}><Text style={{textAlign:"center", color:"white", fontWeight:"bold"}}>Easy Top up & Withdraw</Text>
-      <Text style={{textAlign:"center", color:"white"}}>Enjoy your money after withdrawing. You can buy yourself a chicken wing or a good snack</Text></View>
-      
-    </View>
-    </View>
-  )
-}
+    //   <Swiper
+    //   showsButtons={false}
+    //   loop={false}
+    //   dotStyle={{ marginBottom: 10 }}
+    //   activeDotStyle={{ marginBottom: 10 }}
+    //   onIndexChanged={handleIndexChanged}
+    // >
+    //   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'red' }}>
+    //     <Pagination1/>
+    //   </View>
+    //   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue' }}>
+    //     <Pagination2/>
+    //   </View>
+    //   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'green' }}>
+    //     <Pagination3/>
+    //   </View>
+    // </Swiper>
+    <>
+      <Carousel
+        ref={carouselRef}
+        layout={"default"}
+        renderItem={({ item }) => item.component}
+        sliderWidth={width}
+        itemWidth={width}
+        data={data}
+      />
+    </>
+  );
+};
 
-export default SlideItem
+export default SlideItem;

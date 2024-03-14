@@ -8,6 +8,7 @@ const StandardTextInput = ({ label,value, onChangeText,icon,secureTextEntry,erro
     <TextInput 
     label={label} 
     value={value} 
+    mode="outlined"
     onChangeText={onChangeText} 
     secureTextEntry={secureTextEntry} 
     error={error} 
@@ -26,10 +27,8 @@ const styles = StyleSheet.create({
    height: 50,
    fontSize:15,
    borderRadius:5,
-   borderWidth:1,
-   borderColor:"#CECFD7",
    backgroundColor:"white",
-   marginTop:10,
+   marginTop:5,
   },
 });
 
