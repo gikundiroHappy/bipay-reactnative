@@ -1,21 +1,26 @@
 import { View, Text, Dimensions, Image } from 'react-native'
 import React from 'react'
+import SlideItem from '../Components/SlideItem'
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
 const Pagination3 = () => {
   return (
-    <View style={{backgroundColor:"#3F40AA", height:height, width:width, justifyContent:"space-around", alignItems:"center", padding:20}}>
-    <View style={{flexDirection:"row", gap:245, marginBottom:70}}>
+    <View style={{backgroundColor:"#2D2E9B", height:height, width:width, alignItems:"center", padding:20,}}>
+    <View style={{flexDirection:"row", gap:245, marginTop:20}}>
         <Image source={require('../assets/LOGO.jpg')} style={{height:40, width:95}}/>
-        <Text style={{color:"white", fontWeight:450, }}>SKIP</Text>
+        <Text style={{color:"white", fontWeight:400, }}>SKIP</Text>
     </View>
-<View style={{backgroundColor:"#2D2E9B", height:240, width:240, borderRadius:"100%", alignItems:"center", justifyContent:"center" }}>
-    <Image source={require('../assets/mag3.jpg')} style={{height:170, width:215, borderRadius:22}}/>
+    <View style={{padding:20}}>
+    <Image source={require('../assets/img3.png')} style={{height:240, width:240, }}/>
+    </View>
+
+
+<View style={{alignItems:"center", justifyContent:"center", gap:30, padding:20}}>
+  <Text style={{textAlign:"center", color:"white", fontWeight:"500", fontSize:19}}>Shopping Online</Text>
+  <Text style={{textAlign:"center", color:"white", fontSize:16}}>Buy anything online, without waiting in a queue👌! Buy anything online, without waiting in a queue👌</Text>
 </View>
-<View style={{alignItems:"center", justifyContent:"center", gap:30}}><Text style={{textAlign:"center", color:"white", fontWeight:"bold"}}>Shopping Online</Text>
-  <Text style={{textAlign:"center", color:"white"}}>Buy anything online, without waiting in a queue👌!</Text></View>
   
 </View>
   )
