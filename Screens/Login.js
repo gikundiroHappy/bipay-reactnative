@@ -70,8 +70,10 @@ export default function Login() {
   }
 
   return (
+
     <KeyboardAvoidingView enabled  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <FlashMessage position="top" style={{ zIndex: 999 }} />
+
       <ScrollView>
       <View style={styles.container}>
       <StatusBar style="auto"/>
@@ -113,8 +115,9 @@ export default function Login() {
       </View>
       </View>
       </ScrollView>
-    
-    </KeyboardAvoidingView>
+
+     </KeyboardAvoidingView>
+
   );
 }
 
