@@ -8,11 +8,11 @@ import History from '../Screens/History'
 
 import Profile from '../Screens/profile;
 import BottomNav from './BottomNav';
-
-import Deal from '../Screens/deals';
-import Pagination1 from '../Screens/Pagination1';
-import Pagination3 from '../Screens/Pagination3';
-import Pagination2 from '../Screens/Pagination2';
+import PaginationOne from '../Screens/PaginationOne';
+import PaginationTwo from '../Screens/PaginationThree';
+import PaginationThree from '../Screens/PaginationTwo.js';
+import SlideItems from '../Components/SlideItem';
+import Landing from '../Screens/Landing'
 
 
 const Stack = createNativeStackNavigator();
@@ -21,13 +21,14 @@ export default function StackNavigation() {
   return (
     <NavigationContainer>
 
-      <Stack.Navigator initialRouteName='profile'>
 
+      <Stack.Navigator initialRouteName='home'>
+        <Stack.Screen name='slide' component={SlideItems} options={{headerShown:false}}/>
+        <Stack.Screen name='PageOne' component={PaginationOne} options={{headerShown:false}}/>
+        <Stack.Screen name='PageTwo' component={PaginationTwo} options={{headerShown:false}}/>
+        <Stack.Screen name='Pagethree' component={PaginationThree} options={{headerShown:false}}/>
+        <Stack.Screen name='Landing' component={Landing} options={{headerShown:false}}/>
 
-      <Stack.Navigator initialRouteName='Pagination1'>
-        <Stack.Screen name='Pagination1' component={Pagination1} options={{headerShown:false}}/>
-        <Stack.Screen name='Pagination2' component={Pagination2} options={{headerShown:false}}/>
-        <Stack.Screen name='Pagination3' component={Pagination3} options={{headerShown:false}}/>
 
 
         <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
