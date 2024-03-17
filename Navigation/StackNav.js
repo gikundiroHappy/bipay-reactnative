@@ -7,13 +7,19 @@ import Register from '../Screens/Register';
 import History from '../Screens/History'
 import BottomNav from './BottomNav';
 import Deal from '../Screens/deals';
+import Pagination1 from '../Screens/Pagination1';
+import Pagination3 from '../Screens/Pagination3';
+import Pagination2 from '../Screens/Pagination2';
 
 const Stack = createNativeStackNavigator();
 
 export default function StackNavigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='history'>
+      <Stack.Navigator initialRouteName='Pagination1'>
+        <Stack.Screen name='Pagination1' component={Pagination1} options={{headerShown:false}}/>
+        <Stack.Screen name='Pagination2' component={Pagination2} options={{headerShown:false}}/>
+        <Stack.Screen name='Pagination3' component={Pagination3} options={{headerShown:false}}/>
         <Stack.Screen name='login' component={Login} options={{ headerShown: false }} />
         <Stack.Screen name='register' component={Register} options={{ headerShown: false }} />
         <Stack.Screen name='history' component={BottomNav} options={{ headerShown: false }} />
