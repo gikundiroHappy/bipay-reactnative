@@ -49,6 +49,24 @@ const SlideItem = ({ item }) => {
         itemWidth={width}
         data={data}
       />
+
+     <Pagination
+        dotsLength={data.length}
+        activeDotIndex={activeIndex}
+        containerStyle={{ backgroundColor: 'black' }}
+        dotStyle={{
+          width: 20,
+          height: 20,
+          borderRadius: 5,
+          marginHorizontal: 8,
+          backgroundColor: 'black',
+        }}
+        inactiveDotStyle={{
+        backgroundColor: 'black',
+        }}
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
+      />
     </>
   );
 };
