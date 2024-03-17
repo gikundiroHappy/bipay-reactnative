@@ -1,16 +1,16 @@
-import { View, Text, Dimensions, Image } from 'react-native'
+import { View, Text, Dimensions, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import SlideItem from '../Components/SlideItem'
 
 const height = Dimensions.get('window').height
 const width = Dimensions.get('window').width
 
-const Pagination3 = ({navigation}) => {
+export default function PaginationThree({navigation}){
+
   return (
-    <View style={{backgroundColor:"#2D2E9B", height:height, width:width, alignItems:"center", padding:20,}}>
+    <View style={{backgroundColor:"#3D3DA8", height:height, width:width, alignItems:"center", padding:20,gap:50}}>
     <View style={{flexDirection:"row", gap:245, marginTop:20}}>
         <Image source={require('../assets/LOGO.jpg')} style={{height:40, width:95}}/>
-        <Text style={{color:"white", fontWeight:400, }} onPress={()=> navigation.navigate('history')}>SKIP</Text>
+        <TouchableOpacity onPress={()=> navigation.navigate('landing')}><Text style={{color:"white", fontWeight:400, }}>SKIP</Text></TouchableOpacity>
     </View>
     <View style={{padding:20}}>
     <Image source={require('../assets/img3.png')} style={{height:240, width:240, }}/>
@@ -25,5 +25,3 @@ const Pagination3 = ({navigation}) => {
 </View>
   )
 }
-
-export default Pagination3

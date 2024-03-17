@@ -1,19 +1,16 @@
 import { View, Text, Dimensions, Image } from "react-native";
 import React from "react";
-import { useNavigation } from '@react-navigation/native'
-import SlideItem from "../Components/SlideItem";
 
 export const height = Dimensions.get("window").height;
 export const width = Dimensions.get("window").width;
-// #2D2E9B
 
-const Pagination1 = ({ item }) => {
-  const navigation = useNavigation()
+export default function PaginationOne ({navigation}){
+
   return (
     <>
       <View
         style={{
-          backgroundColor: "#3F40AA",
+          backgroundColor: "#3D3DA8",
           height: height,
           width: width,
           alignItems: "center",
@@ -26,7 +23,7 @@ const Pagination1 = ({ item }) => {
             source={require("../assets/LOGO.jpg")}
             style={{ height: 40, width: 95 }}
           />
-          <Text onPress={()=> navigation.navigate('history')} style={{ color: "white", fontWeight: 400 }}>SKIP</Text>
+          <Text onPress={()=> navigation.navigate('PaginationTwo')} style={{ color: "white", fontWeight: 400 }}>SKIP</Text>
         </View>
         <Image
           source={require("../assets/img1.png")}
@@ -57,4 +54,3 @@ const Pagination1 = ({ item }) => {
   );
 };
 
-export default Pagination1;
