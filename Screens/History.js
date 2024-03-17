@@ -60,7 +60,6 @@ export default function History() {
     ]
 
   return (    
-      <ScrollView>
       <View style={styles.container}>
       <StatusBar style="auto"/>
       <View style={{backgroundColor:"#4647AF",height:80,display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center", paddingHorizontal:20,}}>
@@ -82,8 +81,6 @@ export default function History() {
       )
        )}
       </View>
-      
-      </ScrollView>
   );
 }
 
