@@ -6,13 +6,32 @@ import Deal from "../Screens/deals";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Entypo from "react-native-vector-icons/Entypo"
 import Scanner from "../Screens/Scanner";
+import Bihome from "../Screens/BiHome";
 
 const Tab = createBottomTabNavigator();
 
 const BottomNav = () => {
   return (
     <Tab.Navigator>
+<Tab.Screen
+        name="Home"
+        component={Bihome}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: "#2c2f99",
+          tabBarInactiveTintColor: "#cecddf",
+          tabBarIcon: ({ focused }) => (
+            <Entypo
+              name="home"
+              size={25}
+              color={focused ? "#2c2f99" : "#cecddf"}
+            />
+          ),
+        }}
+      />
+
       <Tab.Screen
         name="History"
         component={History}
