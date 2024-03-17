@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   button: {
     padding: 17,
     alignItems: "center",
-    borderRadius:5
+    borderRadius:12
   },
   btnText:{
     fontWeight:"bold"
