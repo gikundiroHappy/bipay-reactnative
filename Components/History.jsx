@@ -2,9 +2,6 @@
 import { Text, View,Dimensions, } from 'react-native';
 import { Icon } from 'react-native-elements'
 
-const height = Dimensions.get('screen').height;
-const width = Dimensions.get('screen').width;
-
 export default function HistoryData({icon,title,date,amount,color}) {
 
     return (
