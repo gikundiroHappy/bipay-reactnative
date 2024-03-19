@@ -3,8 +3,12 @@ import { Text, View, TouchableOpacity, ScrollView,Modal } from "react-native";
 import { Camera } from "expo-camera";
 import Button from "../Components/Button";
 import QRCode from "react-native-qrcode-svg";
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+
+
 
 const Scanner = () => {
+  const navigation = useNavigation();
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
   const [text, setText] = useState("Not yet scanned!");
@@ -21,6 +25,15 @@ const Scanner = () => {
   useEffect(() => {
     askForCameraPermission();
   }, []);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      const unsubscribe = navigation.addListener('blur', () => {
+        setScanned(false);
+      });
+      return unsubscribe
+    },[])
+  )
 
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
