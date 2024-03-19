@@ -1,15 +1,17 @@
 import React from 'react';
-import { StyleSheet, Text, View,Image } from 'react-native';
+import { StyleSheet, Text, View,Image, TouchableOpacity } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import Button from '../Components/Button';
 
-function Received() {
+function Received({navigation}) {
   return (
-    <View style={styles.maincontainer}>
+  
   <View style={styles.maincontainer}>
   <View style={styles.container}>
+    <TouchableOpacity onPress={() => navigation.goBack()}>
     <FontAwesomeIcon icon={faChevronLeft} style={styles.icon} size={20} />
+    </TouchableOpacity>
     <Text style={styles.maintext}>Receive Money</Text>
   </View>
   <View style={styles.backgroundContainer}>
@@ -30,7 +32,7 @@ function Received() {
     </View>
   </View>
 </View>
-</View>
+
 
   );
 }
@@ -42,7 +44,6 @@ const styles = StyleSheet.create({
     paddingHorizontal:40,
   },
   maincontainer: {
-    flex: 1,
     flexDirection: 'column',
   },
   imagee:{
@@ -53,7 +54,7 @@ alignSelf:'center',
     backgroundColor: '#3C3CA7',
     height: 250,
     flexDirection: 'row',
-    paddingHorizontal: 40,
+    paddingHorizontal: 20,
     alignItems: 'center',
   },
   icon: {
@@ -76,7 +77,7 @@ alignSelf:'center',
   contentContainer: {
     backgroundColor: 'white',
     height: 390,
-    width: '75%',
+    width: '85%',
     top:50,
     borderRadius: 10,
     shadowColor: '#000',
