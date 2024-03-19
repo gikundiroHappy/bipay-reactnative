@@ -22,7 +22,7 @@ export default function StackNavigation() {
     <NavigationContainer>
 
 
-      <Stack.Navigator initialRouteName='slide'>
+      <Stack.Navigator initialRouteName='home'>
         <Stack.Screen name='slide' component={SlideItems} options={{headerShown:false}}/>
         <Stack.Screen name='PageOne' component={PaginationOne} options={{headerShown:false}}/>
         <Stack.Screen name='PageTwo' component={PaginationTwo} options={{headerShown:false}}/>
