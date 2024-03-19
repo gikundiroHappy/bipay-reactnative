@@ -4,13 +4,13 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../Screens/Login';
 import Register from '../Screens/Register';
-import History from '../Screens/History'
+import History from '../Screens/History';
 
-import Profile from '../Screens/profile;
+import Profile from '../Screens/profile';
 import BottomNav from './BottomNav';
 import PaginationOne from '../Screens/PaginationOne';
-import PaginationTwo from '../Screens/PaginationThree';
-import PaginationThree from '../Screens/PaginationTwo.js';
+import PaginationTwo from '../Screens/PaginationTwo';
+import PaginationThree from '../Screens/PaginationThree';
 import SlideItems from '../Components/SlideItem';
 import Landing from '../Screens/Landing'
 
@@ -22,7 +22,7 @@ export default function StackNavigation() {
     <NavigationContainer>
 
 
-      <Stack.Navigator initialRouteName='home'>
+      <Stack.Navigator initialRouteName='slide'>
         <Stack.Screen name='slide' component={SlideItems} options={{headerShown:false}}/>
         <Stack.Screen name='PageOne' component={PaginationOne} options={{headerShown:false}}/>
         <Stack.Screen name='PageTwo' component={PaginationTwo} options={{headerShown:false}}/>
