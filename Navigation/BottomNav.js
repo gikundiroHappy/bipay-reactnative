@@ -9,6 +9,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import Entypo from "react-native-vector-icons/Entypo"
 import Scanner from "../Screens/Scanner";
 import Bihome from "../Screens/BiHome";
+import Profile from "../Screens/profile";
 
 const Tab = createBottomTabNavigator();
 
@@ -76,6 +77,23 @@ const BottomNav = () => {
           tabBarIcon: ({ focused }) => (
             <Ionicons
               name="pricetag-sharp"
+              size={25}
+              color={focused ? "#2c2f99" : "#cecddf"}
+            />
+          ),
+        }}
+      />
+
+<Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          headerShown: false,
+          tabBarActiveTintColor: "#2c2f99",
+          tabBarInactiveTintColor: "#cecddf",
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons
+              name="account-circle"
               size={25}
               color={focused ? "#2c2f99" : "#cecddf"}
             />

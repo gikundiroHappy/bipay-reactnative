@@ -7,6 +7,8 @@ import { useFocusEffect, useNavigation } from '@react-navigation/native';
 
 
 
+import {Svg ,Defs, Rect, Mask} from "react-native-svg"
+
 const Scanner = () => {
   const navigation = useNavigation();
   const [hasPermission, setHasPermission] = useState(null);
@@ -64,9 +66,11 @@ const Scanner = () => {
       </View>
     );
   }
+  
 
   return (
-    <View style={{ backgroundColor: "#E9EDF0", flex: 1, paddingTop: 20 }}>
+    <View style={{backgroundColor: "#E9EDF0", flex: 1, paddingTop: 20  }}>
+ 
       <View style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
         <View style={{ paddingBottom: 30 }}>
           <Text style={{ fontWeight: "bold", fontSize: 20, paddingVertical: 20, textAlign: "center" }}>Place the QR code inside the area</Text>
@@ -74,6 +78,9 @@ const Scanner = () => {
         </View>
         <View style={{ overflow: "hidden", borderRadius: 30 }}>
           <Camera onBarCodeScanned={scanned ? undefined : handleBarCodeScanned} style={{ height: 200, width: 200 }} />
+          
+           
+           
         </View>
       </View>
 
@@ -110,6 +117,7 @@ const Scanner = () => {
         </View>
       </Modal>
       )}
+      
     </View>
   );
 };
