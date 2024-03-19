@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,Dimensions, Image,KeyboardAvoidingView,Platform, ScrollView } from 'react-native';
+import { StyleSheet, Text, View,Dimensions, Image,KeyboardAvoidingView,Platform, ScrollView,TouchableOpacity  } from 'react-native';
 import StandardTextInput from '../Components/StandardTextInput';
 import Button from '../Components/Button';
 import { useState } from 'react';
@@ -111,6 +111,12 @@ export default function Login({navigation}) {
         </View>
         <View style={{marginTop:20}}>
         <Button title="Sign in" backgroundColor="#4647AF" color='white' onPress={HandleLogin}/>
+        <View style={{paddingVertical:10,display:"flex",flexDirection:"row", gap:10}}>
+        <Text>Don't have an account?</Text>
+        <TouchableOpacity onPress={()=>navigation.navigate('register')}>
+        <Text style={{color:"#4647AF",fontWeight:"bold"}}>Register</Text>
+        </TouchableOpacity>
+        </View>
         </View>
       </View>
       </View>
