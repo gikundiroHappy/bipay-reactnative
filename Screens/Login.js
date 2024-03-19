@@ -10,7 +10,7 @@ import { FIREBASE_AUTH } from '../FirebaseConfiguration';
 const height = Dimensions.get('screen').height;
 const width = Dimensions.get('screen').width;
 
-export default function Login() {
+export default function Login({navigation}) {
   const [email,setEmail]=useState('')
   const [emailError,setEmailError]=useState('')
   const [password,setPassword]=useState('')
@@ -54,6 +54,7 @@ export default function Login() {
             icon:"success",
             duration:6000
           });
+          navigation.navigate('home')
         }catch(error){
           showMessage({
             message: error.code.toString(),
@@ -70,8 +71,10 @@ export default function Login() {
   }
 
   return (
+
     <KeyboardAvoidingView enabled  behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <FlashMessage position="top" style={{ zIndex: 999 }} />
+
       <ScrollView>
       <View style={styles.container}>
       <StatusBar style="auto"/>
@@ -113,8 +116,9 @@ export default function Login() {
       </View>
       </View>
       </ScrollView>
-    
+
      </KeyboardAvoidingView>
+
   );
 }
 

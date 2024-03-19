@@ -1,45 +1,29 @@
-import { View, Text, Dimensions, Image } from "react-native";
-import React, { useRef } from "react";
-import Swiper from "react-native-swiper";
-import Pagination2 from "../Screens/Pagination2";
-import Pagination3 from "../Screens/Pagination3";
-import Pagination1 from "../Screens/Pagination1";
-import { slides } from "../data/slides";
+import React from "react";
+import { View, Dimensions } from "react-native";
 import Carousel, { Pagination } from "react-native-snap-carousel";
+import PaginationOne from "../Screens/PaginationOne";
+import PaginationTwo from "../Screens/PaginationTwo.js";
+import PaginationThree from "../Screens/PaginationThree";
 
 const height = Dimensions.get("screen").height;
 const width = Dimensions.get("screen").width;
 
-const SlideItem = ({ item }) => {
-  const carouselRef = useRef(null);
-  const data = [
-    { id: 1, component: <Pagination1 /> },
-    { id: 2, component: <Pagination2 /> },
-    { id: 3, component: <Pagination3 /> },
-  ];
+const data = [
+  { id: 1, component: <PaginationOne /> },
+  { id: 2, component: <PaginationTwo /> },
+  { id: 3, component: <PaginationThree /> },
+];
+
+export default function SlideItem (){
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const carouselRef = React.useRef(null);
 
   const handleIndexChanged = (index) => {
     console.log("Current slide index:", index);
-    // You can perform any additional actions based on the index here
+    setActiveIndex(index);
   };
+
   return (
-    //   <Swiper
-    //   showsButtons={false}
-    //   loop={false}
-    //   dotStyle={{ marginBottom: 10 }}
-    //   activeDotStyle={{ marginBottom: 10 }}
-    //   onIndexChanged={handleIndexChanged}
-    // >
-    //   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'red' }}>
-    //     <Pagination1/>
-    //   </View>
-    //   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue' }}>
-    //     <Pagination2/>
-    //   </View>
-    //   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'green' }}>
-    //     <Pagination3/>
-    //   </View>
-    // </Swiper>
     <>
       <Carousel
         ref={carouselRef}
@@ -48,9 +32,27 @@ const SlideItem = ({ item }) => {
         sliderWidth={width}
         itemWidth={width}
         data={data}
+        onSnapToItem={handleIndexChanged}
+      />
+
+      <Pagination
+        dotsLength={data.length}
+        activeDotIndex={activeIndex}
+        containerStyle={{ backgroundColor: "#3D3DA8" }}
+        dotStyle={{
+          width: 10,
+          height: 10,
+          borderRadius: 50,
+          marginHorizontal: 2,
+          backgroundColor: "white",
+        }}
+        inactiveDotStyle={{
+          backgroundColor: "#F7F7F7",
+        }}
+        inactiveDotOpacity={0.4}
+        inactiveDotScale={0.6}
       />
     </>
   );
 };
 
-export default SlideItem;
