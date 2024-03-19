@@ -43,7 +43,7 @@ export default function SlideItem (){
           width: 10,
           height: 10,
           borderRadius: 50,
-          marginHorizontal: 8,
+          marginHorizontal: 2,
           backgroundColor: "white",
         }}
         inactiveDotStyle={{

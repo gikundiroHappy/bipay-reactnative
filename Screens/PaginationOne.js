@@ -1,10 +1,12 @@
 import { View, Text, Dimensions, Image } from "react-native";
 import React from "react";
+import {useNavigation} from '@react-navigation/native'
 
 export const height = Dimensions.get("window").height;
 export const width = Dimensions.get("window").width;
 
-export default function PaginationOne ({navigation}){
+export default function PaginationOne (){
+  const navigation = useNavigation()
 
   return (
     <>
@@ -21,9 +23,9 @@ export default function PaginationOne ({navigation}){
         <View style={{ flexDirection: "row", gap: 245, marginTop: 20 }}>
           <Image
             source={require("../assets/LOGO.jpg")}
-            style={{ height: 40, width: 95 }}
+            style={{ height: 40, width: 95,  }}
           />
-          <Text onPress={()=> navigation.navigate('PaginationTwo')} style={{ color: "white", fontWeight: 400 }}>SKIP</Text>
+          <Text onPress={()=> navigation.navigate('Landing')} style={{ color: "white", fontWeight: 400 }}>SKIP</Text>
         </View>
         <Image
           source={require("../assets/img1.png")}
