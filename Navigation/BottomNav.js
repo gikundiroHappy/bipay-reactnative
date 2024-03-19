@@ -1,3 +1,7 @@
+
+import Profile from '../Screens/profile'
+
+
 import { View, Text } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -13,9 +17,11 @@ import Profile from "../Screens/profile";
 
 const Tab = createBottomTabNavigator();
 
+
 const BottomNav = () => {
   return (
     <Tab.Navigator>
+
 <Tab.Screen
         name="Home"
         component={Bihome}
@@ -105,3 +111,4 @@ const BottomNav = () => {
 };
 
 export default BottomNav;
+
