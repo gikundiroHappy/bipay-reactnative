@@ -1,15 +1,17 @@
 
 import React from 'react';
-import { StyleSheet, Text, View ,Image, Dimensions} from 'react-native';
+import { StyleSheet, Text, View ,Image, Dimensions,TouchableOpacity} from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBell, faChevronLeft ,faChevronRight} from '@fortawesome/free-solid-svg-icons';
 const height = Dimensions.get('screen').height;
 const width = Dimensions.get('screen').width;
-function SendMoney() {
+function SendMoney({navigation}) {
   return (
     <View style={styles.maincontainer}>
     <View style={styles.container}>
-    <FontAwesomeIcon icon={faChevronLeft} style={styles.icon} size={10} />
+    <TouchableOpacity onPress={() => navigation.goBack()}>
+    <FontAwesomeIcon icon={faChevronLeft} style={styles.icon} size={20} />
+    </TouchableOpacity>
      <Text style={styles.maintext}>Send Money</Text>
     </View>
     <View style={styles.container2}>
@@ -41,7 +43,7 @@ function SendMoney() {
     <Text style={{fontSize:15, fontWeight:'bold',}}>Electricity</Text>
     <Text style={{fontSize:10, fontWeight:'bold', top:2,color:'#B8B8B8'}}>2 Jun 2023</Text>
     </View>
-<Text style={{ccolor:'black', left:120,top:6 ,fontWeight:'bold'}}  >$-3444</Text>
+<Text style={{color:'black', left:120,top:6 ,fontWeight:'bold'}}  >$-3444</Text>
     </View>
 
 

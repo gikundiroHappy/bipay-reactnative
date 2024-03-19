@@ -13,7 +13,7 @@ export default function PaginationTwo(){
     <View style={{backgroundColor:"#3D3DA8", height:height, width:width, alignItems:"center", padding:20, gap:70 }}>
         <View style={{flexDirection:"row", gap:245, marginTop:20}}>
             <Image source={require('../assets/LOGO.jpg')} style={{height:40, width:95}}/>
-            <Text style={{color:"white", fontWeight:400, }} onPress={()=> navigation.navigate('Landing')}>SKIP</Text>
+            <Text style={{color:"white", fontWeight:400, }} onPress={()=> navigation.navigate('Pagethree')}>SKIP</Text>
         </View>
         <Image source={require('../assets/img2.png')} style={{height:240, width:240}}/>
     

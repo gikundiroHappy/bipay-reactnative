@@ -25,7 +25,7 @@ export default function PaginationOne (){
             source={require("../assets/LOGO.jpg")}
             style={{ height: 40, width: 95,  }}
           />
-          <Text onPress={()=> navigation.navigate('Landing')} style={{ color: "white", fontWeight: 400 }}>SKIP</Text>
+          <Text onPress={()=> navigation.navigate('PageTwo')} style={{ color: "white", fontWeight: 400 }}>SKIP</Text>
         </View>
         <Image
           source={require("../assets/img1.png")}
