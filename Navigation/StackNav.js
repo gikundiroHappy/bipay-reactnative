@@ -17,6 +17,7 @@ import Landing from '../Screens/Landing'
 import Receive from '../Screens/Received'
 import Payment from '../Screens/Payment'
 import Sendmoney from '../Screens/SendMoney'
+import ScannedItemsScreen from '../Screens/ScannedItemScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,12 +25,13 @@ export default function StackNavigation() {
   return (
     <NavigationContainer>
 
-     <Stack.Navigator initialRouteName='slide'>
+     <Stack.Navigator initialRouteName='ScannedItems'>
         <Stack.Screen name='slide' component={SlideItems} options={{headerShown:false}}/>
         <Stack.Screen name='PageOne' component={PaginationOne} options={{headerShown:false}}/>
         <Stack.Screen name='PageTwo' component={PaginationTwo} options={{headerShown:false}}/>
         <Stack.Screen name='Pagethree' component={PaginationThree} options={{headerShown:false}}/>
         <Stack.Screen name='Landing' component={Landing} options={{headerShown:false}}/>
+        <Stack.Screen name='ScannedItems' component={ScannedItemsScreen} options={{headerShown:false}}/>
         
         <Stack.Screen name='receive' component={Receive} options={{headerShown:false}}/>
         <Stack.Screen name='payment' component={Payment} options={{headerShown:false}}/>

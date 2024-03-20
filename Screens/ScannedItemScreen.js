@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Text, View, TouchableOpacity, ScrollView,Modal } from "react-native";
+import { Text, View, TouchableOpacity, ScrollView,Modal,Dimensions, } from "react-native";
 import { Camera } from "expo-camera";
 import Button from "../Components/Button";
-import QRCode from "react-native-qrcode-svg";
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const Scanner = () => {
+const height = Dimensions.get('screen').height;
+
+const ScannedItemScreen = () => {
   const navigation = useNavigation();
   const [hasPermission, setHasPermission] = useState(null);
   const [scanned, setScanned] = useState(false);
   const [text, setText] = useState("Not yet scanned!");
   const [hasScanned, setHasScanned] = useState([]);
-  const [generatedQRCode, setGeneratedQRCode] = useState(null);
 
   const askForCameraPermission = () => {
     (async () => {
@@ -44,11 +44,6 @@ const Scanner = () => {
     .then(() => console.log('Scanned items saved successfully'))
     .catch(error => console.error('Error saving scanned items:', error));
 
-  };
-
-  const generateQRCode = () => {
-    const concatenatedText = hasScanned.join(", ");
-    setGeneratedQRCode(concatenatedText); 
   };
 
   if (hasPermission === null) {
@@ -84,41 +79,34 @@ const Scanner = () => {
       </View>
 
       <View style={{ paddingHorizontal: 30, paddingVertical: 10 }}>
-        <Text style={{ fontSize: 17, paddingVertical: 20 }}>Scanned Items:</Text>
-        <ScrollView style={{ height: 190 }}>
+        
+
+        {scanned && (
+          <Modal>
+            <ScrollView style={{position:"relative"}}>
           {hasScanned.map((item, index) => (
-            <View key={index}>
+            <View key={index} style={{height:height,backgroundColor:"#E9EDF0"}}>
+
+       <View style={{backgroundColor:"#4647AF",height:150,paddingHorizontal:30,}}>
+       <Text style={{ fontSize: 17, paddingVertical: 20,fontWeight:"bold",paddingTop:40, color:"white"}}>Scanned Items</Text>
+       </View>
+              <View style={{backgroundColor:"white",marginHorizontal:30,borderRadius:8,padding:20,position:"absolute",right:0,left:0,top:100}}>
               <Text style={{ paddingVertical: 7 }}>{index + 1}.{item}</Text>
+              <View style={{width:"100%",paddingTop:30}}>
+              <Button title="Accept" backgroundColor="#4647AF" color='white'/>
+              </View>
+              </View>
+
+
             </View>
           ))}
         </ScrollView>
-        {scanned && (
-          <View style={{ paddingTop: 15, display: "flex", flexDirection: "row", justifyContent: "space-between", gap: 10 }}>
-            <View style={{ flex: 1 }}>
-              <Button title="Scan Again" backgroundColor="#2c2f99" color="white" onPress={() => setScanned(false)} />
-            </View>
-            <View style={{ flex: 1 }}>
-              <Button title="Get QR code" backgroundColor="#2c2f99" color="white" onPress={generateQRCode} />
-            </View>
-          </View>
+          </Modal>
         )}
       </View>
-
-      {generatedQRCode && (
-        <Modal transparent={true} visible={!!generatedQRCode} animationType="fade">
-        <View style={{ flex: 1, backgroundColor: "rgba(0,0,0,0.7)", justifyContent: "center", alignItems: "center" }}>
-          <View style={{ backgroundColor: "#fff", padding: 40, borderRadius: 10 }}>
-            <QRCode value={generatedQRCode} size={250} />
-            <TouchableOpacity onPress={() => setGeneratedQRCode(null)} style={{ marginTop: 20 }}>
-              <Text style={{ textAlign: "center", color: "#2c2f99" }}>Close</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
-      )}
       
     </View>
   );
 };
 
-export default Scanner;
+export default ScannedItemScreen;
